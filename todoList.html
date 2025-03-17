@@ -14,27 +14,29 @@
 <body>
     <div id="wordsApp">
         <div class="text-center">
-            <h1>You have chosen the WORD COLLECTOR</h1>
+            <h1>You have chosen the ToDo List</h1>
             <div class="mt-3">
-                <input type="text" v-model="word">
-                <button class="btn" @click="Save">save</button>
-                <button class="btn" @click="Show">show</button>
-                <button class="btn" @click="Clear">clear</button>
-
+                <input type="text" v-model="assignment">
+                <button class="btn" @click="Add">Add</button>
             </div>
+
             <div class="resultContainer">
                 <div v-if="message">
-                    {{message}}
+                    <ol>
+                        <li v-for="assignment in assignments">{{assignment}}
+                            <button class="btn" @click="RemoveAssignment(assignment)">remove</button>
+                        </li>
+                    </ol>
+                    <button class="btn" @click="RemoveAll">Clear list</button>
                 </div>
                 <div v-else>
-                    no message!
+                    You are done - Take a break!
                 </div>
             </div>
 
-            <img src="/WORDS.jpg" style="width: 30%;" class="mt-4" alt="">
             <br><a class="btn" href="/index.html">Redeem yourself (back to index)</a>
         </div>
-        <script src="indexWords.js"></script>
+        <script src="todo.js"></script>
 </body>
 
 </html>

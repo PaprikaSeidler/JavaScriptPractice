@@ -22,16 +22,40 @@
                 <button class="btn" @click="Clear">clear</button>
 
             </div>
-            <div class="resultContainer">
-                <div v-if="message">
-                    {{message}}
-                </div>
-                <div v-else>
-                    no message!
-                </div>
 
-                
-            </div>
+                <table class="resultContainer container-fluid">
+                    <thead>
+                        <tr>
+                            <th>List of words raw:</th>
+                            <th>List of words in list</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div v-if="message">
+                                    {{message}}
+                                </div>
+                                <div v-else>
+                                    no message!
+                                </div>
+                            </td>
+                            <td>
+                                <div v-if="message">
+                                    <ol>
+                                        <li v-for="word in words">{{word}}</li>
+                                    </ol>
+                                </div>
+                                <div v-else>
+                                    no message!
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
 
             <img src="/WORDS.jpg" style="width: 30%;" class="mt-4" alt="">
             <br><a class="btn" href="/index.html">Redeem yourself (back to index)</a>
