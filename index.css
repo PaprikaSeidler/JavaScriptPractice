@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+    a:hover {
+        color: white;
+    }
+.btn {
+    background-color: pink;
+    margin: 5px;
+}
+input {
+    padding: 5px;
+}
+.resultContainer{
+    background-color: lavender;
+    font-size: x-large;
+    margin-top: 10px;
+}
+img {
+    border-radius: 10px;
+}
