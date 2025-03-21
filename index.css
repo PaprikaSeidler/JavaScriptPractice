@@ -20,4 +20,8 @@ input {
 img {
     border-radius: 10px;
 }
+.pink {
+    accent-color: pink;
+
+}
 
