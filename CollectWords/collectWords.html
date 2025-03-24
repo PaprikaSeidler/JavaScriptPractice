@@ -8,7 +8,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="/index.css">
-    <title>Document</title>
+    <title>Collect Words</title>
 </head>
 
 <body>
@@ -16,10 +16,10 @@
         <div class="text-center">
             <h1>You have chosen the WORD COLLECTOR</h1>
             <div class="mt-3">
-                <input type="text" v-model="word">
-                <button class="btn" @click="Save">save</button>
-                <button class="btn" @click="Show">show</button>
-                <button class="btn" @click="Clear">clear</button>
+                <input type="text" id="wordInput" v-model="word">
+                <button class="btn" id="save" @click="Save">save</button>
+                <button class="btn" id="show" @click="Show">show</button>
+                <button class="btn" id="clear" @click="Clear">clear</button>
 
             </div>
 
@@ -33,7 +33,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <div v-if="message">
+                                <div  v-if="message">
                                     {{message}}
                                 </div>
                                 <div v-else>
@@ -41,7 +41,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div v-if="message">
+                                <div id="ResultList" v-if="message">
                                     <ol>
                                         <li v-for="word in words">{{word}}</li>
                                     </ol>
@@ -57,7 +57,7 @@
 
 
 
-            <img src="/WORDS.jpg" style="width: 30%;" class="mt-4" alt="">
+            <img src="/CollectWords/WORDS.jpg" style="width: 30%;" class="mt-4" alt="">
             <br><a class="btn" href="/index.html">Redeem yourself (back to index)</a>
         </div>
         <script src="indexWords.js"></script>

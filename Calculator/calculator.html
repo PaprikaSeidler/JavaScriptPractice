@@ -8,7 +8,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="/index.css">
-    <title>Document</title>
+    <title>Calculator</title>
 </head>
 
 <body>
@@ -16,17 +16,17 @@
         <div class="text-center">
             <h1>You have chosen the CALCULATOR</h1>
 <div class="mt-3">
-            <input type="number" v-model="num1">
-            <select class="btn" v-model="defaultOperation" name="operation">
+            <input id="num1" type="number" v-model="num1">
+            <select id="select" class="btn" v-model="defaultOperation" name="operation">
                 <option value="+">+</option>
                 <option value="-">-</option>
                 <option value="*">*</option>
                 <option value="/">/</option>
-                <input type="number" v-model="num2">
-                <button class="btn" @click="Equals">=</button>
+                <input id="num2" type="number" v-model="num2">
+                <button id="equal" class="btn" @click="Equals">=</button>
             </div>
                 <div class="resultContainer">
-                    <div v-if="result !== null">
+                    <div id="result" v-if="result !== null">
                         {{result}}
                     </div>
                 </div>
